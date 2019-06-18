@@ -1,0 +1,103 @@
+id: 12eeb461-12bc-442f-88be-1bd81e2a32bf
+version: 8
+name: comtask
+starttaskid: "0"
+tasks:
+  "0":
+    id: "0"
+    taskid: 5d268d8d-44b3-47d0-8d58-c1f5cc7f10c8
+    type: start
+    task:
+      id: 5d268d8d-44b3-47d0-8d58-c1f5cc7f10c8
+      version: -1
+      name: ""
+      iscommand: false
+      brand: ""
+    nexttasks:
+      '#none#':
+      - "1"
+    separatecontext: false
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 50
+        }
+      }
+    note: false
+    timertriggers: []
+    ignoreworker: false
+  "1":
+    id: "1"
+    taskid: 3f1fd081-2c18-40c4-8617-074adfe8440e
+    type: collection
+    task:
+      id: 3f1fd081-2c18-40c4-8617-074adfe8440e
+      version: -1
+      name: Untitled Task
+      type: collection
+      iscommand: false
+      brand: ""
+    separatecontext: false
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 210
+        }
+      }
+    note: false
+    timertriggers: []
+    ignoreworker: false
+    message:
+      to:
+        simple: omcohen@paloaltonetworks.com
+      subject:
+        simple: Taco Tuesday!!!
+      body:
+        simple: Please fill in this info
+      methods:
+      - email
+      format: ""
+      bcc: null
+      cc: null
+      timings:
+        retriescount: 2
+        retriesinterval: 360
+        completeafterreplies: 0
+      replyOptions:
+      - "Yes"
+      - "No"
+    form:
+      questions:
+      - id: "0"
+        label: ""
+        labelarg:
+          simple: Close Reason
+        required: false
+        gridcolumns: []
+        defaultrows: []
+        type: singleSelect
+        options: []
+        fieldassociated: closereason
+        placeholder: ""
+        tooltip: ""
+      title: Required information
+      description: ""
+      sender: ""
+      expired: false
+      totalanswers: 0
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 255,
+        "width": 380,
+        "x": 450,
+        "y": 50
+      }
+    }
+  }
+inputs: []
+outputs: []

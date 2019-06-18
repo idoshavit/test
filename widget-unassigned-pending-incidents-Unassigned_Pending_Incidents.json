@@ -1,0 +1,44 @@
+{
+	"id": "unassigned-pending-incidents",
+	"version": -1,
+	"modified": "2019-06-03T14:23:31.716702913Z",
+	"commitMessage": "Demisto content update",
+	"shouldPublish": true,
+	"shouldCommit": false,
+	"shouldPush": false,
+	"name": "Unassigned Pending Incidents",
+	"prevName": "Unassigned Pending Incidents",
+	"dataType": "incidents",
+	"widgetType": "list",
+	"query": "-category:job and status:pending and owner:\"\"",
+	"sort": null,
+	"isPredefined": true,
+	"dateRange": {
+		"fromDate": "0001-01-01T00:00:00Z",
+		"toDate": "0001-01-01T00:00:00Z",
+		"period": {
+			"byTo": "",
+			"byFrom": "days",
+			"toValue": null,
+			"fromValue": 7,
+			"field": ""
+		},
+		"fromDateLicense": "0001-01-01T00:00:00Z"
+	},
+	"params": {
+		"tableColumns": [
+			{
+				"displayed": true,
+				"isDefault": true,
+				"key": "name"
+			},
+			{
+				"displayed": true,
+				"isDefault": true,
+				"key": "severity"
+			}
+		]
+	},
+	"size": 0,
+	"category": ""
+}

@@ -1,0 +1,27 @@
+{
+	"id": "domainRep",
+	"version": -1,
+	"modified": "2019-06-03T14:23:31.426537674Z",
+	"commitMessage": "Demisto content update",
+	"shouldPublish": true,
+	"shouldCommit": false,
+	"shouldPush": false,
+	"regex": "",
+	"details": "Domain",
+	"prevDetails": "Domain",
+	"reputationScriptName": "",
+	"reputationCommand": "",
+	"enhancementScriptNames": [
+		"DomainReputation"
+	],
+	"system": true,
+	"locked": false,
+	"disabled": false,
+	"file": false,
+	"updateAfter": 0,
+	"mergeContext": false,
+	"formatScript": "",
+	"contextPath": "",
+	"contextValue": "",
+	"excludedBrands": null
+}

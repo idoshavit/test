@@ -1,0 +1,35 @@
+{
+	"id": "incidents-by-role",
+	"version": -1,
+	"modified": "2019-06-03T14:23:31.667201717Z",
+	"commitMessage": "Demisto content update",
+	"shouldPublish": true,
+	"shouldCommit": false,
+	"shouldPush": false,
+	"name": "Incidents by Role",
+	"prevName": "Incidents by Role",
+	"dataType": "incidents",
+	"widgetType": "bar",
+	"query": "-category:job",
+	"sort": null,
+	"isPredefined": true,
+	"dateRange": {
+		"fromDate": "0001-01-01T00:00:00Z",
+		"toDate": "0001-01-01T00:00:00Z",
+		"period": {
+			"byTo": "",
+			"byFrom": "days",
+			"toValue": null,
+			"fromValue": 7,
+			"field": ""
+		},
+		"fromDateLicense": "0001-01-01T00:00:00Z"
+	},
+	"params": {
+		"groupBy": [
+			"roles"
+		]
+	},
+	"size": 10,
+	"category": ""
+}

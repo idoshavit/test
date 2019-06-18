@@ -1,0 +1,27 @@
+{
+	"id": "emailRep",
+	"version": -1,
+	"modified": "2019-06-03T14:23:31.414872021Z",
+	"commitMessage": "Demisto content update",
+	"shouldPublish": true,
+	"shouldCommit": false,
+	"shouldPush": false,
+	"regex": "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}\\b",
+	"details": "Email",
+	"prevDetails": "Email",
+	"reputationScriptName": "",
+	"reputationCommand": "",
+	"enhancementScriptNames": [
+		"EmailReputation"
+	],
+	"system": true,
+	"locked": false,
+	"disabled": false,
+	"file": false,
+	"updateAfter": 0,
+	"mergeContext": false,
+	"formatScript": "",
+	"contextPath": "Account.Email(val.Address \u0026\u0026 val.Address === obj.Address)",
+	"contextValue": "Address",
+	"excludedBrands": null
+}

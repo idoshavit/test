@@ -1,5 +1,5 @@
 id: e10c46b6-5838-4bd7-8870-84c70705e499
-version: 1
+version: 3
 name: Default_copy
 description: Default playbook, Enrich indicators in incident using one or more integrations
 starttaskid: "0"
@@ -71,25 +71,21 @@ tasks:
     timertriggers: []
   "2":
     id: "2"
-    taskid: 145e7a29-471e-4702-8493-65b7abbea30c
+    taskid: 484c0970-2a0a-437f-8328-22f8fc291086
     type: regular
     task:
-      id: 145e7a29-471e-4702-8493-65b7abbea30c
+      id: 484c0970-2a0a-437f-8328-22f8fc291086
       version: -1
-      name: Choose analyst
-      script: AssignAnalystToIncident
+      name: Close
+      script: Builtin|||closeInvestigation
       type: regular
-      iscommand: false
-      brand: ""
-    nexttasks:
-      '#none#':
-      - "7"
+      iscommand: true
+      brand: Builtin
     scriptarguments:
-      assignBy:
-        simple: random
-      email: {}
-      roles: {}
-      username: {}
+      assetid: {}
+      closeNotes: {}
+      closeReason: {}
+      id: {}
     separatecontext: false
     view: |-
       {
@@ -131,7 +127,10 @@ tasks:
     task:
       id: 44e6a83f-14cd-49f4-8c41-0ffde22d3c4f
       version: -1
-      name: ""
+      name: Extract Indicators - Generic
+      description: |-
+        Deprecated: We recommend using extractIndicators command instead.
+        Extract indicators from input data.
       playbookId: extract_indicators_-_generic
       type: playbook
       iscommand: false
@@ -156,7 +155,8 @@ tasks:
     task:
       id: 49cd29a6-4a83-44e6-8bdc-86136341411a
       version: -1
-      name: ""
+      name: Entity Enrichment - Generic
+      description: Enrich entities using one or more integrations
       playbookId: entity_enrichment_generic
       type: playbook
       iscommand: false
@@ -181,7 +181,15 @@ tasks:
     task:
       id: 0e467280-8c85-40e6-84a0-4b11305dbcd7
       version: -1
-      name: ""
+      name: Calculate Severity - Generic
+      description: |-
+        Calculates and assign the incident severity based on the highest returned severity level from the following severity calculations:
+
+        * Indicators DBotScore - Calculates the incident severity level according to the highest indicator DBotScore.
+        * Critical assets - Determines if a critical assest is associated with the invesigation.
+        * 3rd-party integrations - Calculates the incident severity level according to the methodology of a 3rd-party integration.
+
+        NOTE: the new severity level overwrites the previous severity level even if the previous severity level was more severe.
       playbookId: Calculate Severity - Generic
       type: playbook
       iscommand: false
@@ -199,65 +207,12 @@ tasks:
       }
     note: false
     timertriggers: []
-  "7":
-    id: "7"
-    taskid: 52714931-6ca9-42ff-854f-af9d3bc9e3d0
-    type: regular
-    task:
-      id: 52714931-6ca9-42ff-854f-af9d3bc9e3d0
-      version: -1
-      name: Manually review the incident
-      type: regular
-      iscommand: false
-      brand: ""
-    nexttasks:
-      '#none#':
-      - "8"
-    separatecontext: false
-    view: |-
-      {
-        "position": {
-          "x": 50,
-          "y": 1215
-        }
-      }
-    note: false
-    timertriggers: []
-  "8":
-    id: "8"
-    taskid: e39abb8a-2dbe-415e-8541-ba414ee3dfa6
-    type: regular
-    task:
-      id: e39abb8a-2dbe-415e-8541-ba414ee3dfa6
-      version: -1
-      name: Close Investigation
-      description: Close the current incident
-      script: Builtin|||closeInvestigation
-      type: regular
-      iscommand: true
-      brand: Builtin
-    scriptarguments:
-      assetid: {}
-      closeNotes:
-        simple: Default Enrichment Playbook
-      closeReason: {}
-      id: {}
-    separatecontext: false
-    view: |-
-      {
-        "position": {
-          "x": 50,
-          "y": 1395
-        }
-      }
-    note: false
-    timertriggers: []
 view: |-
   {
     "linkLabelsPosition": {},
     "paper": {
       "dimensions": {
-        "height": 1440,
+        "height": 1085,
         "width": 492.5,
         "x": 50,
         "y": 50

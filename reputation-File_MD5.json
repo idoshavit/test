@@ -1,0 +1,28 @@
+{
+	"id": "hashRep",
+	"version": -1,
+	"modified": "2019-06-03T14:23:31.397814663Z",
+	"commitMessage": "Demisto content update",
+	"shouldPublish": true,
+	"shouldCommit": false,
+	"shouldPush": false,
+	"regex": "\\b[a-fA-F\\d]{32}\\b",
+	"details": "File MD5",
+	"prevDetails": "File MD5",
+	"reputationScriptName": "",
+	"reputationCommand": "file",
+	"enhancementScriptNames": [
+		"FileReputation",
+		"SplunkPySearch"
+	],
+	"system": true,
+	"locked": false,
+	"disabled": false,
+	"file": false,
+	"updateAfter": 0,
+	"mergeContext": false,
+	"formatScript": "",
+	"contextPath": "File(val.MD5 \u0026\u0026 val.MD5 === obj.MD5)",
+	"contextValue": "MD5",
+	"excludedBrands": null
+}

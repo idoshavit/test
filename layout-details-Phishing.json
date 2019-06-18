@@ -1,7 +1,7 @@
 {
-	"id": "Access",
+	"id": "Phishing",
 	"version": -1,
-	"modified": "2019-06-03T14:23:31.94510751Z",
+	"modified": "2019-06-03T14:23:31.937891773Z",
 	"commitMessage": "Demisto content update",
 	"shouldPublish": true,
 	"shouldCommit": false,
@@ -9,15 +9,15 @@
 	"name": "",
 	"kind": "details",
 	"prevKind": "details",
-	"typeId": "Access",
-	"prevTypeId": "Access",
+	"typeId": "Phishing",
+	"prevTypeId": "Phishing",
 	"system": true,
 	"sections": [
 		{
 			"id": "",
 			"version": 0,
 			"modified": "0001-01-01T00:00:00Z",
-			"name": "Access Info",
+			"name": "Email Properties",
 			"type": "",
 			"isVisible": true,
 			"readOnly": false,
@@ -26,53 +26,74 @@
 					"id": "",
 					"version": 0,
 					"modified": "0001-01-01T00:00:00Z",
-					"fieldId": "incident_app",
+					"fieldId": "incident_emailsubject",
 					"isVisible": true
 				},
 				{
 					"id": "",
 					"version": 0,
 					"modified": "0001-01-01T00:00:00Z",
-					"fieldId": "incident_src",
+					"fieldId": "incident_emailfrom",
 					"isVisible": true
 				},
 				{
 					"id": "",
 					"version": 0,
 					"modified": "0001-01-01T00:00:00Z",
-					"fieldId": "incident_srcntdomain",
+					"fieldId": "incident_emailreturnpath",
 					"isVisible": true
 				},
 				{
 					"id": "",
 					"version": 0,
 					"modified": "0001-01-01T00:00:00Z",
-					"fieldId": "incident_srcuser",
+					"fieldId": "incident_emailto",
 					"isVisible": true
 				},
 				{
 					"id": "",
 					"version": 0,
 					"modified": "0001-01-01T00:00:00Z",
-					"fieldId": "incident_dest",
+					"fieldId": "incident_emailcc",
 					"isVisible": true
 				},
 				{
 					"id": "",
 					"version": 0,
 					"modified": "0001-01-01T00:00:00Z",
-					"fieldId": "incident_destntdomain",
+					"fieldId": "incident_emailbcc",
 					"isVisible": true
 				},
 				{
 					"id": "",
 					"version": 0,
 					"modified": "0001-01-01T00:00:00Z",
-					"fieldId": "incident_duration",
+					"fieldId": "incident_emailtocount",
+					"isVisible": true
+				},
+				{
+					"id": "",
+					"version": 0,
+					"modified": "0001-01-01T00:00:00Z",
+					"fieldId": "incident_emailsenderip",
+					"isVisible": true
+				},
+				{
+					"id": "",
+					"version": 0,
+					"modified": "0001-01-01T00:00:00Z",
+					"fieldId": "incident_emailreplyto",
+					"isVisible": true
+				},
+				{
+					"id": "",
+					"version": 0,
+					"modified": "0001-01-01T00:00:00Z",
+					"fieldId": "incident_emailmessageid",
 					"isVisible": true
 				}
 			],
-			"description": "More information on the access attempts ",
+			"description": "",
 			"query": null,
 			"queryType": ""
 		},
@@ -80,7 +101,7 @@
 			"id": "",
 			"version": 0,
 			"modified": "0001-01-01T00:00:00Z",
-			"name": "Basic Information",
+			"name": "Case Management",
 			"type": "",
 			"isVisible": true,
 			"readOnly": false,
@@ -117,69 +138,7 @@
 					"id": "",
 					"version": 0,
 					"modified": "0001-01-01T00:00:00Z",
-					"fieldId": "incident_sourcebrand",
-					"isVisible": true
-				},
-				{
-					"id": "",
-					"version": 0,
-					"modified": "0001-01-01T00:00:00Z",
-					"fieldId": "incident_sourceinstance",
-					"isVisible": true
-				},
-				{
-					"id": "",
-					"version": 0,
-					"modified": "0001-01-01T00:00:00Z",
-					"fieldId": "incident_playbookid",
-					"isVisible": true
-				},
-				{
-					"id": "",
-					"version": 0,
-					"modified": "0001-01-01T00:00:00Z",
-					"fieldId": "incident_phase",
-					"isVisible": true
-				},
-				{
-					"id": "",
-					"version": 0,
-					"modified": "0001-01-01T00:00:00Z",
-					"fieldId": "incident_roles",
-					"isVisible": true
-				}
-			],
-			"description": "",
-			"query": null,
-			"queryType": ""
-		},
-		{
-			"id": "",
-			"version": 0,
-			"modified": "0001-01-01T00:00:00Z",
-			"name": "Work Plan",
-			"type": "workplan",
-			"isVisible": true,
-			"readOnly": true,
-			"fields": [],
-			"description": "",
-			"query": null,
-			"queryType": ""
-		},
-		{
-			"id": "",
-			"version": 0,
-			"modified": "0001-01-01T00:00:00Z",
-			"name": "Timeline Information",
-			"type": "",
-			"isVisible": true,
-			"readOnly": false,
-			"fields": [
-				{
-					"id": "",
-					"version": 0,
-					"modified": "0001-01-01T00:00:00Z",
-					"fieldId": "incident_dbotcreated",
+					"fieldId": "incident_dbotsource",
 					"isVisible": true
 				},
 				{
@@ -188,6 +147,34 @@
 					"modified": "0001-01-01T00:00:00Z",
 					"fieldId": "incident_occurred",
 					"isVisible": true
+				}
+			],
+			"description": "",
+			"query": null,
+			"queryType": ""
+		},
+		{
+			"id": "",
+			"version": 0,
+			"modified": "0001-01-01T00:00:00Z",
+			"name": "SLA",
+			"type": "",
+			"isVisible": true,
+			"readOnly": false,
+			"fields": [
+				{
+					"id": "",
+					"version": 0,
+					"modified": "0001-01-01T00:00:00Z",
+					"fieldId": "incident_detectionsla",
+					"isVisible": true
+				},
+				{
+					"id": "",
+					"version": 0,
+					"modified": "0001-01-01T00:00:00Z",
+					"fieldId": "incident_remediationsla",
+					"isVisible": true
 				},
 				{
 					"id": "",
@@ -195,20 +182,6 @@
 					"modified": "0001-01-01T00:00:00Z",
 					"fieldId": "incident_dbotduedate",
 					"isVisible": true
-				},
-				{
-					"id": "",
-					"version": 0,
-					"modified": "0001-01-01T00:00:00Z",
-					"fieldId": "incident_dbotmodified",
-					"isVisible": true
-				},
-				{
-					"id": "",
-					"version": 0,
-					"modified": "0001-01-01T00:00:00Z",
-					"fieldId": "incident_dbottotaltime",
-					"isVisible": true
 				}
 			],
 			"description": "",
@@ -219,75 +192,93 @@
 			"id": "",
 			"version": 0,
 			"modified": "0001-01-01T00:00:00Z",
-			"name": "Custom Fields",
+			"name": "Email Body",
 			"type": "",
 			"isVisible": true,
 			"readOnly": false,
+			"fields": [
+				{
+					"id": "",
+					"version": 0,
+					"modified": "0001-01-01T00:00:00Z",
+					"fieldId": "incident_emailbody",
+					"isVisible": true
+				}
+			],
+			"description": "Email relevant Body fields",
+			"query": null,
+			"queryType": ""
+		},
+		{
+			"id": "",
+			"version": 0,
+			"modified": "0001-01-01T00:00:00Z",
+			"name": "Email HTML Image",
+			"type": "invTimeline",
+			"isVisible": true,
+			"readOnly": true,
 			"fields": [],
 			"description": "",
-			"query": null,
-			"queryType": ""
+			"query": {
+				"tags": [
+					"email_html_image"
+				]
+			},
+			"queryType": "warRoomFilter"
 		},
 		{
 			"id": "",
 			"version": 0,
 			"modified": "0001-01-01T00:00:00Z",
-			"name": "Details",
+			"name": "Email Attachments",
 			"type": "",
 			"isVisible": true,
-			"readOnly": true,
+			"readOnly": false,
 			"fields": [
 				{
 					"id": "",
 					"version": 0,
 					"modified": "0001-01-01T00:00:00Z",
-					"fieldId": "incident_details",
+					"fieldId": "incident_attachmentname",
 					"isVisible": true
-				}
-			],
-			"description": "",
-			"query": null,
-			"queryType": ""
-		},
-		{
-			"id": "",
-			"version": 0,
-			"modified": "0001-01-01T00:00:00Z",
-			"name": "Labels",
-			"type": "labels",
-			"isVisible": true,
-			"readOnly": true,
-			"fields": [
-				{
-					"id": "",
-					"version": 0,
-					"modified": "0001-01-01T00:00:00Z",
-					"fieldId": "incident_labels",
-					"isVisible": true
-				}
-			],
-			"description": "",
-			"query": null,
-			"queryType": ""
-		},
-		{
-			"id": "",
-			"version": 0,
-			"modified": "0001-01-01T00:00:00Z",
-			"name": "Attachments",
-			"type": "",
-			"isVisible": true,
-			"readOnly": true,
-			"fields": [
+				},
 				{
 					"id": "",
 					"version": 0,
 					"modified": "0001-01-01T00:00:00Z",
 					"fieldId": "incident_attachment",
 					"isVisible": true
+				},
+				{
+					"id": "",
+					"version": 0,
+					"modified": "0001-01-01T00:00:00Z",
+					"fieldId": "incident_attachmenthash",
+					"isVisible": true
+				},
+				{
+					"id": "",
+					"version": 0,
+					"modified": "0001-01-01T00:00:00Z",
+					"fieldId": "incident_attachmentextension",
+					"isVisible": true
+				},
+				{
+					"id": "",
+					"version": 0,
+					"modified": "0001-01-01T00:00:00Z",
+					"fieldId": "incident_attachmentsize",
+					"isVisible": true
+				},
+				{
+					"id": "",
+					"version": 0,
+					"modified": "0001-01-01T00:00:00Z",
+					"fieldId": "incident_attachmenttype",
+					"isVisible": true
 				}
 			],
-			"description": "",
+			"description": "Email Attachments Files info",
 			"query": null,
 			"queryType": ""
 		},
@@ -295,13 +286,13 @@
 			"id": "",
 			"version": 0,
 			"modified": "0001-01-01T00:00:00Z",
-			"name": "Bad or Suspicious Indicators",
+			"name": "Indicators",
 			"type": "indicators",
 			"isVisible": true,
 			"readOnly": true,
 			"fields": [],
 			"description": "",
-			"query": "reputation:Bad or reputation:Suspicious",
+			"query": null,
 			"queryType": "input"
 		},
 		{
@@ -347,76 +338,8 @@
 			"id": "",
 			"version": 0,
 			"modified": "0001-01-01T00:00:00Z",
-			"name": "Incident Timeline",
-			"type": "invTimeline",
-			"isVisible": true,
-			"readOnly": true,
-			"fields": [],
-			"description": "",
-			"query": {
-				"categories": [
-					"incidentInfo"
-				],
-				"lastId": "",
-				"pageSize": 100,
-				"tags": [],
-				"users": []
-			},
-			"queryType": "warRoomFilter"
-		},
-		{
-			"id": "",
-			"version": 0,
-			"modified": "0001-01-01T00:00:00Z",
-			"name": "Incident Files",
-			"type": "invTimeline",
-			"isVisible": true,
-			"readOnly": true,
-			"fields": [],
-			"description": "",
-			"query": {
-				"categories": [
-					"attachments"
-				],
-				"lastId": "",
-				"pageSize": 100,
-				"tags": [],
-				"users": []
-			},
-			"queryType": "warRoomFilter"
-		},
-		{
-			"id": "",
-			"version": 0,
-			"modified": "0001-01-01T00:00:00Z",
 			"name": "Team",
 			"type": "team",
-			"isVisible": true,
-			"readOnly": true,
-			"fields": [],
-			"description": "",
-			"query": null,
-			"queryType": ""
-		},
-		{
-			"id": "",
-			"version": 0,
-			"modified": "0001-01-01T00:00:00Z",
-			"name": "Child Incidents",
-			"type": "childInv",
-			"isVisible": true,
-			"readOnly": true,
-			"fields": [],
-			"description": "",
-			"query": null,
-			"queryType": ""
-		},
-		{
-			"id": "",
-			"version": 0,
-			"modified": "0001-01-01T00:00:00Z",
-			"name": "Automation Highlights",
-			"type": "findings",
 			"isVisible": true,
 			"readOnly": true,
 			"fields": [],

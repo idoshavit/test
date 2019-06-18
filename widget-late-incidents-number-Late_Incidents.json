@@ -1,0 +1,31 @@
+{
+	"id": "late-incidents-number",
+	"version": -1,
+	"modified": "2019-06-03T14:23:31.724484636Z",
+	"commitMessage": "Demisto content update",
+	"shouldPublish": true,
+	"shouldCommit": false,
+	"shouldPush": false,
+	"name": "Late Incidents",
+	"prevName": "Late Incidents",
+	"dataType": "incidents",
+	"widgetType": "number",
+	"query": "-category:job and -status:archived and -status:closed and dueDate:\u003cnow",
+	"sort": null,
+	"isPredefined": true,
+	"dateRange": {
+		"fromDate": "0001-01-01T00:00:00Z",
+		"toDate": "0001-01-01T00:00:00Z",
+		"period": {
+			"byTo": "",
+			"byFrom": "days",
+			"toValue": null,
+			"fromValue": 7,
+			"field": ""
+		},
+		"fromDateLicense": "0001-01-01T00:00:00Z"
+	},
+	"params": null,
+	"size": 0,
+	"category": ""
+}

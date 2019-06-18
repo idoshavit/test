@@ -1,0 +1,30 @@
+{
+	"id": "fileRep",
+	"version": -1,
+	"modified": "2019-06-03T14:23:31.42992802Z",
+	"commitMessage": "Demisto content update",
+	"shouldPublish": true,
+	"shouldCommit": false,
+	"shouldPush": false,
+	"regex": "",
+	"details": "File enhancement scripts",
+	"prevDetails": "File enhancement scripts",
+	"reputationScriptName": "",
+	"reputationCommand": "",
+	"enhancementScriptNames": [
+		"Strings",
+		"CYFileRep",
+		"SandboxDetonateFile",
+		"ParseEmailFiles"
+	],
+	"system": true,
+	"locked": false,
+	"disabled": false,
+	"file": true,
+	"updateAfter": 0,
+	"mergeContext": false,
+	"formatScript": "",
+	"contextPath": "",
+	"contextValue": "",
+	"excludedBrands": null
+}
